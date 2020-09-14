@@ -25,14 +25,15 @@ I use Cloudflare with Flexible SSL enabled and HTTP Rewrites. If you do not use 
 For webservers, I use NGINX on a Ubuntu server; smaller the better. I rely on Cloudflare to provide caching and SSL, so my installation of NGINX is pretty simple. 
 ```
 sudo apt-get update 
-apt-get install nginx -y
+sudo apt-get install nginx -y
 sudo vi /etc/nginx/sites-available/default
 sudo systemctl restart nginx
 ```
 
 An example NGINX config file that "hides" the file extensions is as follows.  Update the file as needed and 
 
-```server {
+```
+server {
         listen 80;
         listen [::]:80;
 
